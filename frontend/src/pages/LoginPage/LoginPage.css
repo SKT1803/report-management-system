@@ -1,165 +1,183 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 .app-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .auth-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 
-	position: relative;
-	right: 5%;
-
+  position: relative;
+  right: 5%;
 }
 
 .auth-card {
-	background-color: white;
-	border-radius: 10px;
-	padding: 40px;
-	width: 400px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	display: flex;
-	flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  padding: 40px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
 .auth-title {
-	font-size: 24px;
-	font-weight: bold;
-	text-align: center;
-	margin-bottom: 60px;
-	color: black;
-	user-select: none;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 60px;
+  color: black;
+  user-select: none;
 }
 
 .auth-form {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .auth-input {
-	width: 100%;
-	padding: 10px 0;
-	border: none;
-	border-bottom: 1px solid #ccc;
-	outline: none;
-	font-size: 16px;
-	color: black;
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+  color: black;
 }
 
 .forgot-password {
-	text-align: center;
-	margin: 2rem 0;
-	user-select: none;
+  text-align: center;
+  margin: 2rem 0;
+  user-select: none;
 }
 
 .forgot-password a {
-	color: black;
-	text-decoration: none;
-	font-size: 1rem;
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 .submit-button-container {
-	display: flex;
-	justify-content: center;
-	margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .triangle-button {
-	background: none;
-	border: none;
-	cursor: pointer;
-	padding: 10px;
-	outline: none;
-	transition: transform 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  outline: none;
+  transition: transform 0.3s ease;
 }
 
 .triangle-button.active .triangle {
-	border-left-color: black;
+  border-left-color: black;
 }
 
 .triangle-button.inactive {
-	opacity: 0.5;
-	cursor: not-allowed;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .triangle {
-	width: 0;
-	height: 0;
-	border-top: 25px solid transparent;
-	border-bottom: 25px solid transparent;
-	border-left: 35px solid #e0e0e0;
-	transition: border-color 0.3s ease;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 35px solid #e0e0e0;
+  transition: border-color 0.3s ease;
 }
 
 .triangle-button:hover {
-	transform: scale(1.3);
+  transform: scale(1.3);
 }
-
 
 /* Fade‐in animation */
 @keyframes fadeIn {
-	from {
-		opacity: 0;
-		transform: translateY(10px);
-	}
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.auth-form>* {
-	animation: fadeIn 0.5s ease-out forwards;
-	animation-fill-mode: both;
+.auth-form > * {
+  animation: fadeIn 0.5s ease-out forwards;
+  animation-fill-mode: both;
 }
 
-.auth-form>*:nth-child(1) {
-	animation-delay: 0.1s;
+.auth-form > *:nth-child(1) {
+  animation-delay: 0.1s;
 }
 
-.auth-form>*:nth-child(2) {
-	animation-delay: 0.2s;
+.auth-form > *:nth-child(2) {
+  animation-delay: 0.2s;
 }
 
-.auth-form>*:nth-child(3) {
-	animation-delay: 0.3s;
+.auth-form > *:nth-child(3) {
+  animation-delay: 0.3s;
 }
 
-.auth-form>*:nth-child(4) {
-	animation-delay: 0.4s;
+.auth-form > *:nth-child(4) {
+  animation-delay: 0.4s;
 }
-
 
 .app-logo {
-	width: 620px;
-	height: auto;
-	cursor: pointer;
-	transition: transform 0.3s ease;
+  width: 620px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 
-	position: relative;
-	right: 10%;
-	user-select: none;
+  position: relative;
+  right: 10%;
+  user-select: none;
 }
 
 /* .app-logo:hover {
   transform: scale(1.1);
 } */
+
+/* Button loading */
+.triangle-button.loading {
+  opacity: 0.8;
+  cursor: default;
+}
+
+.spin {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-top-color: rgba(0, 0, 0, 0.85);
+  border-radius: 50%;
+  animation: pr-spin 0.9s linear infinite;
+}
+
+@keyframes pr-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
