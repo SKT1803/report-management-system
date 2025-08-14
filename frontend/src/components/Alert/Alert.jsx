@@ -1,5 +1,6 @@
 import "./Alert.css";
 
+// suan kullanılmıyor
 export default function Alert({ type = "info", children, onClose }) {
   return (
     <div className={`alert ${type}`}>
