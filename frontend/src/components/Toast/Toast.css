@@ -1,0 +1,46 @@
+.toast-stack {
+	position: fixed;
+	right: 24px;
+	bottom: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	z-index: 9999;
+}
+
+.toast {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	background: #111827;
+	color: #fff;
+	border-radius: 10px;
+	padding: 10px 14px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, .18);
+	font-size: .95rem;
+	animation: toast-pop .18s ease-out;
+}
+
+.toast.info {
+	background: #111827;
+}
+
+.toast.success {
+	background: #111827;
+}
+
+.toast.error {
+	background: #991b1b;
+}
+
+@keyframes toast-pop {
+	from {
+		transform: translateY(8px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}

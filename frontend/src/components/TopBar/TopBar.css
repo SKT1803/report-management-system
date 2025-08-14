@@ -1,0 +1,43 @@
+.topbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px 20px;
+	border-bottom: 1px solid #eee;
+	background: #fff;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.brandWrap {
+	display: flex;
+	align-items: baseline;
+	gap: 12px;
+}
+
+.brand {
+	font-weight: 700;
+}
+
+.welcome {
+	color: #666;
+	font-size: 0.95rem;
+}
+
+.logoutBtn {
+	border: 1px solid #ddd;
+	background: #fafafa;
+	padding: 6px 10px;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: background 0.2s ease, transform 0.05s ease;
+}
+
+.logoutBtn:hover {
+	background: #f0f0f0;
+}
+
+.logoutBtn:active {
+	transform: translateY(1px);
+}

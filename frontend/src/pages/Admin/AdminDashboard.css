@@ -1,0 +1,199 @@
+.ad-page-wrap {
+	margin: 0 auto;
+	padding: 18px;
+}
+
+/* üstte durum rozeti */
+.ad-header-row {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.ad-bell {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	color: #334155;
+	margin-top: 1rem;
+}
+
+.ad-icon {
+	opacity: .7;
+}
+
+.ad-alert {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 13px;
+	padding: 4px 8px;
+	border-radius: 999px;
+	border: 1px solid #fed7aa;
+	background: #fff7ed;
+	color: #9a3412;
+}
+
+.ad-alert.ok {
+	background: #ecfdf5;
+	color: #065f46;
+	border-color: #a7f3d0;
+}
+
+.ad-alert.warn {
+	background: #fff7ed;
+	color: #9a3412;
+	border-color: #fed7aa;
+}
+
+/* ---- 3 kolonlu grid ---- */
+.ad-grid {
+	display: grid;
+	grid-template-columns: 340px 1fr 520px;
+	/* sol | orta | sağ */
+	gap: 14px;
+	align-items: start;
+}
+
+
+/* Kart */
+.ad-card {
+	background: #fff;
+	border: 1px solid #e5e7eb;
+	border-radius: 12px;
+	box-shadow: 0 1px 2px rgba(16, 24, 40, .06);
+}
+
+.ad-card-title {
+	padding: 12px 14px;
+	border-bottom: 1px solid #e5e7eb;
+	font-weight: 600;
+}
+
+/* Info */
+.ad-info-list {
+	padding: 12px 14px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.ad-info-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.ad-info-key {
+	color: #6b7280;
+}
+
+.ad-info-val {
+	color: #0f172a;
+	font-weight: 500;
+}
+
+/* Orta sütun – aksiyonlar 2xN */
+.ad-center .ad-actions {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+}
+
+.ad-action {
+	position: relative;
+	background: #fff;
+	border: 1px solid #e5e7eb;
+	border-radius: 12px;
+	cursor: pointer;
+	padding: 18px;
+	text-align: center;
+	box-shadow: 0 1px 2px rgba(16, 24, 40, .06);
+}
+
+.ad-action:hover {
+	background: #f9fafb;
+}
+
+.ad-iconwrap {
+	width: 56px;
+	height: 56px;
+	display: grid;
+	place-items: center;
+	border-radius: 999px;
+	margin: 0 auto 10px auto;
+}
+
+.ad-blue {
+	background: #e8eefc;
+	color: #1e40af;
+}
+
+.ad-green {
+	background: #e8f5e9;
+	color: #166534;
+}
+
+.ad-purple {
+	background: #eee8fd;
+	color: #6b21a8;
+}
+
+.ad-orange {
+	background: #fff1e6;
+	color: #b45309;
+}
+
+.ad-action-title {
+	font-weight: 700;
+}
+
+.ad-action-sub {
+	color: #64748b;
+	font-size: 13px;
+}
+
+/* küçük durum noktası */
+.ad-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 999px;
+	background: #ef4444;
+	position: absolute;
+	top: 8px;
+	right: 8px;
+}
+
+.ad-dot.ok {
+	background: #10b981;
+}
+
+/* Sağ sütun – Messages */
+.ad-messages {
+	min-width: 0;
+	position: sticky;
+	top: 12px;
+}
+
+.ad-messages .mp-card {
+	width: 100%;
+}
+
+
+@media (max-width: 700px) {
+	.ad-center .ad-actions {
+		grid-template-columns: 1fr;
+	}
+}
+
+
+/* küçük ek boşluk (responsive) */
+@media (max-width: 1100px) {
+	.ad-messages {
+		margin-top: 12px;
+	}
+
+  .ad-grid {
+		grid-template-columns: 1fr;
+	}
+}

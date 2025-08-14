@@ -1,0 +1,194 @@
+.reports-container {
+	max-width: 1200px;
+	margin: auto;
+	padding: 24px
+}
+
+.reports-header {
+	margin-bottom: 24px
+}
+
+.back-btn {
+	margin-bottom: 8px
+}
+
+.title {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #111
+}
+
+.subtitle {
+	color: #555
+}
+
+.card {
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 16px
+}
+
+.search-card {
+	margin-bottom: 24px
+}
+
+.search-wrapper {
+	position: relative
+}
+
+.search-input {
+	width: 100%;
+	padding: 8px 12px;
+	border-radius: 6px;
+	border: 1px solid #ccc
+}
+
+.search-info {
+	font-size: .9rem;
+	color: #666;
+	margin-top: 8px
+}
+
+.empty-card {
+	text-align: center;
+	padding: 48px 0
+}
+
+.empty-text {
+	color: #777
+}
+
+.nav-controls {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 16px
+}
+
+.nav-buttons {
+	display: flex;
+	align-items: center;
+	gap: 8px
+}
+
+.btn-outline {
+	padding: 4px 8px;
+	border: 1px solid #ccc;
+	background: #fff;
+	border-radius: 4px;
+	cursor: pointer
+}
+
+.btn-outline:disabled {
+	opacity: .5;
+	cursor: not-allowed
+}
+
+.nav-index {
+	font-size: .9rem;
+	color: #555
+}
+
+.nav-note {
+	font-size: .8rem;
+	color: #888
+}
+
+.report-card .card-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center
+}
+
+.report-title {
+	font-size: 1.1rem;
+	display: flex;
+	align-items: center;
+	gap: 6px
+}
+
+
+.rv-badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 4px 8px;
+	min-width: 28px;
+	height: 22px;
+	font-size: .8rem;
+	font-weight: 600;
+	line-height: 1;
+	border-radius: 999px;
+	border: 1px solid #bbf7d0;
+	background: #e8f5e9;
+	color: #166534;
+	position: static;
+}
+
+
+.report-content {
+	white-space: pre-wrap;
+	color: #333;
+	line-height: 1.5
+}
+
+.highlight {
+	background: yellow;
+	padding: 0 2px;
+	border-radius: 2px
+}
+
+.all-reports {
+	margin-top: 24px
+}
+
+.section-title {
+	font-size: 1.1rem;
+	font-weight: 700;
+	margin-bottom: 12px
+}
+
+.report-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 12px
+}
+
+.report-thumb {
+	cursor: pointer;
+	transition: box-shadow .2s
+}
+
+.report-thumb:hover {
+	box-shadow: 0 2px 6px rgba(0, 0, 0, .1)
+}
+
+.active-thumb {
+	border: 2px solid #3b82f6
+}
+
+.thumb-header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 8px;
+	font-size: .85rem
+}
+
+.thumb-text {
+	font-size: .85rem;
+	color: #555
+}
+
+.btn-ghost {
+	background: transparent;
+	border: none;
+	color: #374151;
+	padding: 6px 8px;
+	border-radius: 8px;
+	cursor: pointer
+}
+
+.btn-ghost:hover {
+	background: #f3f4f6
+}
