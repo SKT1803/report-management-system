@@ -184,7 +184,11 @@ func Me(c *gin.Context) {
 
 	var u models.User
 	if err := db.Col("users").FindOne(c.Request.Context(), bson.M{"_id": oid}).Decode(&u); err != nil {
-		c.JSON(http.StatusNotFound, gin.H{"error": "user not found"})
+		// c.JSON(http.StatusNotFound, gin.H{"error": "user not found"})
+		 c.JSON(http.StatusUnauthorized, gin.H{
+            "error": "Unauthorized",
+            "code":  "USER_NOT_FOUND",
+        })
 		return
 	}
 
