@@ -141,41 +141,19 @@ Infra (deployment + db)
 
 ---
 
-## Local Development
+## Running the Project (Local)
 
 ### Prerequisites
 
-- Node 18+
+- **Go** ≥ 1.22 (install the latest stable)
 
-- npm / pnpm / yarn
+- **Node.js** ≥ 18 and **npm**
 
-- Go (match your go.mod; Go 1.22+ recommended)
+- A **MongoDB** connection string (Atlas or local)
 
-- MongoDB (Atlas or local)
+> The app seeds the **Departments** collection on first run, so you don’t need a manual seed step.
 
-### Environment Variables
-
-Create these files:
-
-frontend/.env
-
-     VITE_API_URL=http://localhost:5000/api
-
-backend/.env
-
-    PORT=5000
-    MONGO_URI=mongodb+srv://<user>:<pass>@<cluster>/<db>?retryWrites=true&w=majority
-    JWT_SECRET= <create yours>
-
-> Tip: Commit frontend/.env.example and backend/.env.example with placeholders; keep real .env files out of Git.
-
-
-
-
-
-
-
-
+### 1) First-time setup
 
 
 
