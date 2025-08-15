@@ -105,7 +105,7 @@ Employee (e.g., Sales)
 ## Tech Stack
 
 ### Frontend
-
+  
   - React + Vite
   
   - React Router
@@ -137,6 +137,56 @@ Infra (deployment + db)
 - Render (backend)
 
 - MongoDB Atlas
+
+
+---
+
+## Local Development
+
+### Prerequisites
+
+- Node 18+
+
+- npm / pnpm / yarn
+
+- Go (match your go.mod; Go 1.22+ recommended)
+
+- MongoDB (Atlas or local)
+
+### Environment Variables
+
+Create these files:
+
+frontend/.env
+
+```powershell
+
+ VITE_API_URL=http://localhost:5000/api
+
+```
+
+
+
+
+backend/.env
+
+```powershell
+
+    PORT=5000
+    MONGO_URI=mongodb+srv://<user>:<pass>@<cluster>/<db>?retryWrites=true&w=majority
+    JWT_SECRET= <create yours>
+
+```
+
+> Tip: Commit frontend/.env.example and backend/.env.example with placeholders; keep real .env files out of Git.
+
+
+
+
+
+
+
+
 
 
 
