@@ -1,4 +1,11 @@
-import { BrowserRouter, Routes, Route, Outlet, useNavigate, Navigate } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Outlet,
+  useNavigate,
+  Navigate,
+} from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import LoginPage from "./pages/LoginPage/LoginPage";
@@ -11,11 +18,13 @@ import ReportsViewer from "./components/ReportsViewer/ReportsViewer";
 import EmployeeAnalytics from "./components/Analytics/EmployeeAnalytics";
 import DepartmentEmployees from "./components/DepartmentEmployees/DepartmentEmployees";
 
-import { RequireRole, RedirectIfAuth } from "./components/RouteGuard/RouteGuards";
+import {
+  RequireRole,
+  RedirectIfAuth,
+} from "./components/RouteGuard/RouteGuards";
 import { apiAuth, getDepartments } from "./utils/api";
 import { ToastProvider } from "./components/Toast/ToastProvider";
 import GeneralAnalytics from "./components/AnalyticsGeneral/GeneralAnalytics";
-
 
 /* ----- Employee alt rotaları ----- */
 function EmpEditorRoute() {
@@ -49,7 +58,9 @@ function AdminReportsRoute() {
 }
 function AdminAnalysisRoute() {
   const navigate = useNavigate();
-  return <EmployeeAnalytics userType="admin" onBack={() => navigate("/admin")} />;
+  return (
+    <EmployeeAnalytics userType="admin" onBack={() => navigate("/admin")} />
+  );
 }
 function AdminEmployeesRoute() {
   const navigate = useNavigate();
@@ -119,7 +130,7 @@ function SuperEmployeesRoute() {
       onBack={() => navigate("/superadmin")}
       adminDepartment={dep}
       myUserId={me?._id || me?.id}
-      /* 🔹 başlığın sağına dep. seçimi */
+      /*  başlığın sağına dep. seçimi */
       headerRight={
         <>
           <label className="em-label">Department</label>
@@ -129,7 +140,9 @@ function SuperEmployeesRoute() {
             onChange={(e) => setDep(e.target.value)}
           >
             {deps.map((d) => (
-              <option key={d} value={d}>{d}</option>
+              <option key={d} value={d}>
+                {d}
+              </option>
             ))}
           </select>
         </>
@@ -147,7 +160,6 @@ function SuperAnalysisRoute() {
     />
   );
 }
-
 
 function SuperOverviewRoute() {
   const navigate = useNavigate();
@@ -191,7 +203,7 @@ export default function App() {
             <Route index element={<SuperadminDashboard />} />
             <Route path="employees" element={<SuperEmployeesRoute />} />
             <Route path="analysis" element={<SuperAnalysisRoute />} />
-             <Route path="overview" element={<SuperOverviewRoute />} /> 
+            <Route path="overview" element={<SuperOverviewRoute />} />
           </Route>
 
           {/* Employee ve alt sayfaları */}
