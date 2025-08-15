@@ -155,17 +155,85 @@ Infra (deployment + db)
 
 ### 1) First-time setup
 
+**1.1 Clone the repo**
+
+    git clone https://github.com/<your-user>/<your-repo>.git
+    cd <your-repo>
+
+**1.2 Create env files**
+
+Backend (backend/.env)
+
+    PORT=5000
+    MONGO_URI=<your-mongodb-uri>
+    JWT_SECRET=<a-long-random-secret>
+    # Optional in local (CORS already allows localhost:5173)
+    # CLIENT_URL=http://localhost:5173
 
 
+Frontend (frontend/.env)
+
+    VITE_API_URL=http://localhost:5000/api
 
 
+**1.3 Install dependencies**
+
+Backend
+
+    cd backend
+    go mod download  
+
+Frontend
+
+    cd frontend
+    npm install
 
 
+### 2) Run (first time & every time)
+
+You’ll run two terminals:one for backend, one for frontend.
+
+Terminal A – Backend
+
+    cd backend
+    go run main.go
+    # API up at http://localhost:5000
+
+Terminal B – Frontend
+
+    cd frontend
+    npm run dev
+    # App up at http://localhost:5173
+
+Open http://localhost:5173 in your browser and log in.
 
 
+### 3) Subsequent runs (after the first day)
 
 
+You don’t need to reinstall anything unless dependencies changed.
+
+Backend
+
+    cd backend
+    go run main.go
+
+Frontend
+
+    cd frontend
+    npm run dev
 
 
+### Notes & Tips
+
+- **CORS (local)**: Already whitelisted for `http://localhost:5173` and `http://127.0.0.1:5173`. `CLIENT_URL` is **not required** locally.
+
+- **CORS (prod)**: When deployed, set `CLIENT_URL` on the backend to your Vercel URL, and set `VITE_API_URL` on the frontend to your backend’s `/api` base.
+
+- **Ports**: Backend defaults to `:5000`; Frontend (Vite) defaults to `:5173`.
+
+- **Mongo**: Use Atlas or a local MongoDB; just point `MONGO_URI` to the right place.
+
+- **Auto seed**: `Departments` indexes + seed run automatically on backend start if empty.
 
 
