@@ -6,3 +6,33 @@ A lightweight daily report & hours tracking app with role-based dashboards, depa
 Superadmin + per-department Admin/Employee demo accounts are already provisioned on the live server—use them to try the app end-to-end.
 
 🌐 Live on vercel: [report-management-system](https://report-management-system-one.vercel.app)
+
+Demo Credentials (pre-created)
+
+```powershell
+
+Superadmin
+  email: superadmin@example.com
+  password : 123
+
+Admin (e.g., Sales)
+  email: sales.admin@example.com
+  password : 123
+
+Employee (e.g., Sales)
+  email: sales.employee01@example.com
+  password : 123
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
