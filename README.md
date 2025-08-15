@@ -26,6 +26,11 @@ Employee (e.g., Sales)
 ```
 
 
+<table>
+  <tr>
+    <td><img src="images/1.png" width="1000"></td>
+  </tr>
+</table>
 
 
 
