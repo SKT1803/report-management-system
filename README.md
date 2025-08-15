@@ -273,4 +273,36 @@ Verify everything is consistent:
 
 - **Auto seed**: `Departments` indexes + seed run automatically on backend start if empty.
 
+---
+
+## UX Notes
+
+
+- **Deleted user handling**: If a user is removed from DB while logged in, the next `/api/me` call returns **401**, the frontend clears the token and redirects to **/login**.
+
+- **Company Overview**: Avg Hours reflect the **currently selected period** (7d/30d/6m/12m).
+
+- **Superadmin Analytics**: Department switcher lives on the right side of the analytics header. Scope excludes “My Activity”.
+
+---
+
+### Previews
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
