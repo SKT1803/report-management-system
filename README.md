@@ -224,6 +224,43 @@ Frontend
     npm run dev
 
 
+### Go Modules (go.mod / go.sum): Quick Reference
+
+Most common (after pulling, or when you added/removed imports):
+
+    cd backend
+    go mod tidy        # cleans up go.mod/go.sum (adds missing, drops unused)
+    go mod download    # (optional) pre-download modules
+
+Add a new dependency:
+    
+    cd backend
+    go get github.com/some/lib@latest
+    go mod tidy
+
+Update existing deps to latest minor/patch:
+
+    cd backend
+    go get -u ./...
+    go mod tidy
+
+
+Fix checksum / sum mismatches:
+
+    cd backend
+    go clean -modcache
+    go mod tidy
+    go mod download
+
+Verify everything is consistent:
+
+    cd backend
+    go mod verify
+
+
+> Rule of thumb: whenever go.mod or go.sum changes, go mod tidy is usually all you need. For new deps, do go get … then go mod tidy.
+
+
 ### Notes & Tips
 
 - **CORS (local)**: Already whitelisted for `http://localhost:5173` and `http://127.0.0.1:5173`. `CLIENT_URL` is **not required** locally.
