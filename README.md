@@ -159,24 +159,13 @@ Create these files:
 
 frontend/.env
 
-```powershell
-
- VITE_API_URL=http://localhost:5000/api
-
-```
-
-
-
+     VITE_API_URL=http://localhost:5000/api
 
 backend/.env
-
-```powershell
 
     PORT=5000
     MONGO_URI=mongodb+srv://<user>:<pass>@<cluster>/<db>?retryWrites=true&w=majority
     JWT_SECRET= <create yours>
-
-```
 
 > Tip: Commit frontend/.env.example and backend/.env.example with placeholders; keep real .env files out of Git.
 
